@@ -1,12 +1,15 @@
-import { AppBar, Toolbar, Typography, Link } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Link as MaterialLink } from '@material-ui/core';
 import { useStyles } from './styles';
 import { fetchData } from '../../api';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import NavbarLink from './NavbarLink';
+import { Link as RouterLink } from 'react-router-dom';
+import { PlanetContext } from '../../contexts/PlanetContext';
 
 function Navbar() {
     const classes = useStyles();
     const [planets, setPlanets] = useState([]);
+    const { handleClick } = useContext(PlanetContext);
 
     useEffect(() => {
         const fetchPlanets = async () => {
@@ -16,6 +19,7 @@ function Navbar() {
 
         fetchPlanets();
     }, []);
+
 
     return (
         <AppBar
@@ -34,18 +38,18 @@ function Navbar() {
                 </Typography>
                 <Typography>
                     {
-                        planets && planets.map((planet, index) => (
-                            <Link
-                                href="#"
+                        planets && planets.map((singlePlanet, index) => (
+                            <MaterialLink
+                                onClick={ () => handleClick(singlePlanet.name) }
                                 underline="none"
                                 color="inherit"
                                 key={index}
+                                component={RouterLink} to={`/planets/${singlePlanet.name}`}
                             >
-                                <NavbarLink planet={planet}/>
-                            </Link>
+                                <NavbarLink singlePlanet={singlePlanet}/>
+                            </MaterialLink>
                         ))
                     }
-
                 </Typography>
             </Toolbar>
         </AppBar>

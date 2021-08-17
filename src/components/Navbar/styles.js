@@ -30,6 +30,7 @@ export const useStyles = makeStyles((theme) => ({
         display: 'inline-block',
         margin: '0 12px',
         color: 'var(--link)',
+        cursor: 'pointer',
         '&:hover': {
             color: 'inherit',
         },
@@ -47,7 +48,7 @@ export const useStyles = makeStyles((theme) => ({
             },
             '&:hover::before': {
                 width: "100%",
-                background: ({borderColor}) => borderColor,
+                background: ({color}) => color,
             },
         },
         '@media (max-width: 1283px)': {
@@ -64,7 +65,7 @@ export const useStyles = makeStyles((theme) => ({
             },
             '&:hover::after': {
                 width: "100%",
-                background: ({borderColor}) => borderColor,
+                background: ({color}) => color,
             },
         }
     }

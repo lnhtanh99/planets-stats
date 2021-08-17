@@ -10,6 +10,7 @@
     /* navbar */
     --border: rgba(255, 255, 255, 0.2);
     --link: #747d8c;
+    --hover: #535c68;
 
     /* planet */
     --mercury: rgb(65, 158, 187);
@@ -24,4 +25,5 @@
 
 body {
     background-color: var(--dark);
+    min-width: 320px;
 }

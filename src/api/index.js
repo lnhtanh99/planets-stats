@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const urlAllPlanets = 'http://localhost:8080/planets';
-const singlePlanetURL = 'http://localhost:8080/planets/?name=';
+const urlAllPlanets = 'https://planet-json.herokuapp.com/planets';
+const singlePlanetURL = 'https://planet-json.herokuapp.com/planets/?name=';
 
 export const fetchData = async() => {
     try {

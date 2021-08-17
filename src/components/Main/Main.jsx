@@ -17,7 +17,7 @@ function Main() {
     useEffect(() => {
         const fetchPlanet = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:8080/planets/?name=${name}`);
+                const { data } = await axios.get(`https://planet-json.herokuapp.com/planets/?name=${name}`);
                 setPlanet(data);
 
             }

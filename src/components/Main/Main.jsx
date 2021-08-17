@@ -16,14 +16,26 @@ function Main() {
 
     useEffect(() => {
         const fetchPlanet = async () => {
-            try {
-                const { data } = await axios.get(`https://planet-json.herokuapp.com/planets/?name=${name}`);
-                setPlanet(data);
+            if(name){
+                try {
+                    const { data } = await axios.get(`https://planet-json.herokuapp.com/planets/?name=${name}`);
+                    setPlanet(data);
+    
+                }
+                catch (err) {
+                    console.error(err);
+                }
+            } else {
+                try {
+                    const { data } = await axios.get(`https://planet-json.herokuapp.com/planets/?name=Earth`);
+                    setPlanet(data);
+    
+                }
+                catch (err) {
+                    console.error(err);
+                }
+            }
 
-            }
-            catch (err) {
-                console.error(err);
-            }
         }
         fetchPlanet();
     }, [name, setPlanet]);

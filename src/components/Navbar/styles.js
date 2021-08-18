@@ -18,9 +18,58 @@ export const useStyles = makeStyles((theme) => ({
         padding: '20px',
         ...theme.typography.antonio,
         textAlign: 'left',
-        '@media (max-width: 1283px)': {
+        '@media (min-width: 1097px) and (max-width: 1283px)': {
             textAlign: 'center',
+        },
+    },
+    menu:{
+        color: 'var(--link)',
+        '&:hover' :{
+            color: 'white'
+        },
+        '@media (min-width: 1096px)': {
+            display: 'none'
         }
+    },
+    show: {
+        '@media (max-width: 1096px)': {
+            display: 'none'
+        }
+    },
+    drawer:{
+        width: '100%',
+    },
+    drawerHeader: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+    },
+    drawerTitle: {
+        textTransform: 'uppercase',
+        ...theme.typography.antonio,
+        color: 'var(--dark)',
+        fontSize: '35px',
+        textAlign: 'center',
+        paddingBottom: '20px'
+    },
+    drawerList:{
+        '&:hover': {
+            backgroundColor: 'var(--hover)',
+        },
+        padding: '0 15px'
+    },
+    drawerLink: {
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '15px 0',
+    },
+    drawerIcon: {
+        color: ({color}) => color,
+    },
+    drawerText:{
+        ...theme.typography.spartan,
+        color: 'black',
+        fontWeight: 'bold',
     },
     link: {
         ...theme.typography.spartan,

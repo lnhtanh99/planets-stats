@@ -42,7 +42,7 @@ export const useStyles = makeStyles((theme) => ({
     wikipedia: {
         cursor: 'pointer',
         textDecoration: 'underline',
-        color: '#747d8c',
+        color: 'var(--link)',
         '&:hover': {
             color: 'inherit'
         }, 

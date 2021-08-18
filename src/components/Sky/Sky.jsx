@@ -44,14 +44,14 @@ function Sky() {
             >
                 <svg className={classes.sky}>
                     {
-                        [...Array(100)].map((x, index) => (
+                        [...Array(150)].map((x, index) => (
                             <circle
                                 cx={getRandomX()}
                                 cy={getRandomY()}
                                 r={randomRadius()}
                                 stroke="none"
                                 strokeWidth="0"
-                                fill="white"
+                                fill="#535c68"
                                 key={index}
                                 className="star"
                             />

@@ -3,13 +3,11 @@ import { makeStyles } from "@material-ui/core";
 export const useStyles = makeStyles((theme) => ({
     root: {
         color: 'white',
+
     },
     images:{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
         margin: "auto",
-        marginTop:'150px',
+        paddingTop: '150px',
     },
     img: {
         '@media (max-width: 700px)': {

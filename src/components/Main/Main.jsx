@@ -62,8 +62,8 @@ function Main() {
     const classes = useStyles({ color });
     return (
         <Container className={classes.root}>
-            <Grid container >
-                <Grid item md={12} lg={8} className={classes.images}>
+            <Grid container>
+                <Grid item md={8} lg={8} className={classes.images}>
                     {overview && <img src={planet.map(el => el.images.planet)} className={classes.img} alt="planet" />}
                     {internal && <img src={planet.map(el => el.images.internal)} className={classes.img} alt="planet" />}
                     {geology &&
@@ -77,7 +77,7 @@ function Main() {
                         </div>
                     }
                 </Grid>
-                <Grid item md={12} lg={4} className={classes.content}>
+                <Grid item md={4} lg={4} className={classes.content}>
                     <Typography
                         variant="h1"
                         component="h2"

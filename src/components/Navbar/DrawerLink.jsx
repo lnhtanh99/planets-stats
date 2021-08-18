@@ -18,8 +18,8 @@ function DrawerLink({ singlePlanet }) {
             component={RouterLink} to={`/planets/${name}`}
             className={classes.drawerLink}
         >
-            <ListItemIcon className={classes.drawerIcon}>
-                <FiberManualRecordIcon />
+            <ListItemIcon>
+                <FiberManualRecordIcon style={{ color: color }}/>
             </ListItemIcon>
             <ListItemText >
                 <span className={classes.drawerText}>{name}</span>

@@ -63,9 +63,6 @@ export const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         padding: '15px 0',
     },
-    drawerIcon: {
-        color: ({color}) => color,
-    },
     drawerText:{
         ...theme.typography.spartan,
         color: 'black',

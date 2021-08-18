@@ -7,6 +7,9 @@ export const useStyles = makeStyles((theme) => ({
     },
     images:{
         paddingTop: '150px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     img: {
         '@media (max-width: 700px)': {

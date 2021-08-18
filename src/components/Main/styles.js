@@ -6,7 +6,6 @@ export const useStyles = makeStyles((theme) => ({
 
     },
     images:{
-        margin: "auto",
         paddingTop: '150px',
     },
     img: {

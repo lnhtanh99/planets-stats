@@ -62,7 +62,7 @@ function Main() {
     const classes = useStyles({ color });
     return (
         <Container className={classes.root}>
-            <Grid container>
+            <Grid container justifyContent="center">
                 <Grid item md={8} lg={8} className={classes.images}>
                     {overview && <img src={planet.map(el => el.images.planet)} className={classes.img} alt="planet" />}
                     {internal && <img src={planet.map(el => el.images.internal)} className={classes.img} alt="planet" />}

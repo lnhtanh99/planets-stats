@@ -1,7 +1,7 @@
 # Solar Planets Project
 This project was build using ReactJS, react-router, Context API, react-animejs, axios, Material UI and Custom JSON server
 ## Live URL: https://solar-planets-cryo.netlify.app/
-
+### THE API on heroku will sleep if not use, so refresh the page a few time to work properly
 ## Available Scripts
 
 In the project directory, you can run:

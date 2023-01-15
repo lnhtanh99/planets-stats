@@ -1,6 +1,8 @@
 import { useStyles } from "./styles";
 import { Grid, Typography, Paper } from '@material-ui/core';
 
+import { useState, useEffect } from "react";
+
 function Stats({ planet }) {
     const classes = useStyles();
 
@@ -13,7 +15,7 @@ function Stats({ planet }) {
                             <span className={classes.title}>rotation time</span> 
                         </Typography>
                         <Typography className={classes.info}>
-                            {planet.rotation}
+                            {planet.rotation} { (planet.name === "Mercury" || planet.name === "Venus" || planet.name === "Earth" || planet.name === "Mars") ? ' Days' : ' Hours'}
                         </Typography>
                     </Paper>
 
@@ -24,7 +26,7 @@ function Stats({ planet }) {
                             <span className={classes.title}>revolution time</span> 
                         </Typography>
                         <Typography className={classes.info}>
-                            {planet.revolution}
+                            {planet.revolution} { (planet.name === "Mercury" || planet.name === "Venus" || planet.name === "Earth" ) ? ' Days' : ' Years'}
                         </Typography>
                     </Paper>
 
@@ -35,7 +37,7 @@ function Stats({ planet }) {
                             <span className={classes.title}>radius</span> 
                         </Typography>
                         <Typography className={classes.info}>
-                            {planet.radius}
+                            {new Intl.NumberFormat().format(planet.radius)} KM
                         </Typography>
                     </Paper>
                 </Grid>
@@ -45,7 +47,7 @@ function Stats({ planet }) {
                             <span className={classes.title}>average temp</span> 
                         </Typography>
                         <Typography className={classes.info}>
-                            {planet.temperature}
+                            {planet.temperature} °C
                         </Typography>
                     </Paper>
                 </Grid>
